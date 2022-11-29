@@ -1,0 +1,80 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+</style>
+
+body{
+    margin: 0;
+}
+
+main{
+    padding: 16px;
+}
+#table{
+    grid-template-columns: 100px 100px 100px 100px;
+}
+footer{
+    padding: 24px 24px;
+    background-color: greenyellow
+
+}
+img{
+    height: 200px;
+    margin-left: 0;
+}
+header{
+    background-color: red;
+}
+nav{
+    padding: 16px;
+    border-bottom: 1px solid black
+}
+
+footer{
+    position: static;
+
+}
+a{
+    text-decoration: none;
+    color: green;
+    text-shadow: 1px 1px 1px rgb(124, 11, 204), 0 0 1em blue;
+}
+
+a:hover{
+    background-color: rgb(0, 204, 255);
+
+}
+
+h1{
+    color: green;
+}
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+table{
+    box-shadow: 10px 5px 5px rgb(13, 7, 184);
+}
+
+
+table tr:nth-child(even){
+    background-color: rgb(128, 128, 128,.5) ;
+}
+
+ol li:nth-child(even){
+    color: purple
+}
+
+#main{
+    color: white;
+}
+
+p{
+    font-size: smaller;
+}
+
+.star{
+    font-size: smaller;
+}
+

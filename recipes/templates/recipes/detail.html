@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {{recipe_object.title}}
+            - Scrumptious Recipes</title>
+        <link rel="stylesheet" href="{% static "css/recipes.css" %}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a id= "main" href="{% url 'recipe_list' %}" >Main</a>
+            </nav>
+        </header>
+        <main>
+            <h1>{{recipe_object.title}}</h1>
+            <img class="fit-picture" src = "{{recipe_object.picture}}">
+            <div>4.3 stars</div>
+            <p>{{ recipe_object.description }}</p>
+            <h2>Ingredients</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Food Item</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 Cup</td>
+                        <td>Green beans</td>
+                    </tr>
+                    <tr>
+                        <td>3 ears</td>
+                        <td>Fresh corn</td>
+                    </tr>
+                    <tr>
+                        <td>2 Cups</td>
+                        <td>Tomatillo salsa</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Corn tortillas</td>
+                    </tr>
+                    <tr>
+                        <td>0.5 cups</td>
+                        <td>Cotija cheese</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Steps</h2>
+            <ol>
+                <li>Blanch the green beans</li>
+                <li>Grill the green beans and the ears of corn</li>
+
+                <li>Chop the green beans</li>
+                <li>Slice the corn off the cob</li>
+                <li>Assemble the tacos with veggies, salsa, and cheese</li>
+            </ol>
+        </main>
+        <footer>Made with love by Scrumptious Recipes</footer>
+    </body>
+
+</html>

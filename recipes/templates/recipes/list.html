@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scumptius Recipes</title>
+        <link rel="stylesheet" href="{% static "css/recipes.css" %}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a id="main" href="{% url 'recipe_list' %}" >Main page</a>
+                <a href="{% url 'create_recipe'%}">Create a recipe</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Scumptius Recipes</h1>
+            <h2>All the food that's fit to eat<h2>
+            <div class ="gridcontainer" >
+                {% for recipe in recipe_list %}
+                <div>
+                    <p><a href="{% url 'show_recipe' recipe.id%}">{{ recipe.title }}</a></p>
+                    <p>{{ recipe.created_on | date:"M d Y"}}
+                    <img class="fit-picture" src = "{{ recipe.picture}}">
+                    <div class = "star" >5 stars</div>
+                    <a href="{% url 'edit_recipe' recipe.id %}">Edit Recipe</a>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+        </main>
+        <footer> Made with love by Scrimptious Recipes </footer>
+    </body>
+</html>
