@@ -31,36 +31,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for ingredient in recipe_object.ingredients.all %}
                     <tr>
-                        <td>1 Cup</td>
-                        <td>Green beans</td>
+                        <td>{{ ingredient.amount}}</td>
+                        <td>{{ ingredient.food_item}}e</td>
                     </tr>
-                    <tr>
-                        <td>3 ears</td>
-                        <td>Fresh corn</td>
-                    </tr>
-                    <tr>
-                        <td>2 Cups</td>
-                        <td>Tomatillo salsa</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Corn tortillas</td>
-                    </tr>
-                    <tr>
-                        <td>0.5 cups</td>
-                        <td>Cotija cheese</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
             <h2>Steps</h2>
             <ol>
-                <li>Blanch the green beans</li>
-                <li>Grill the green beans and the ears of corn</li>
-
-                <li>Chop the green beans</li>
-                <li>Slice the corn off the cob</li>
-                <li>Assemble the tacos with veggies, salsa, and cheese</li>
+                {% for step in recipe_object.steps.all %}
+                    <li>{{ step.instruction }}</li>
+                {% endfor %}
             </ol>
         </main>
         <footer>Made with love by Scrumptious Recipes</footer>
