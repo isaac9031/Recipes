@@ -19,7 +19,7 @@ class Recipe(models.Model):
         return self.title
 
 
-class RecipeStep(models.Model):
+class RecipeStep(models.Model):  #will create a table that has id, step_number, instruction, recipe_id(the recipe id number comes from the Recipe table)
     step_number = models.PositiveSmallIntegerField()
     instruction = models.TextField()
     recipe = models.ForeignKey(
@@ -32,7 +32,7 @@ class RecipeStep(models.Model):
 
 
 
-class Ingredient(models.Model):
+class Ingredient(models.Model): #will have id, amount, food_item, and recipe_id
     amount = models.CharField(max_length = 100)
     food_item = models.CharField(max_length = 100)
     recipe = models.ForeignKey(

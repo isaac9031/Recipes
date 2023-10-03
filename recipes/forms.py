@@ -9,3 +9,12 @@ class RecipeForm(ModelForm):
             "picture",
             "description",
         ]
+
+class PostForm(ModelForm):
+    class Meta:
+        model = Recipe
+        fields = [
+            "title",
+            "picture",
+            "description",
+        ]

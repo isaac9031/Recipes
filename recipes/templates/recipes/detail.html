@@ -31,17 +31,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for ingredient in recipe_object.ingredients.all %}
+                    {% for ingredient in recipe_object.ingredients.all %} {% comment %}uses the related_name=ingredients to access the Ingredient table {% endcomment %}
                     <tr>
                         <td>{{ ingredient.amount}}</td>
-                        <td>{{ ingredient.food_item}}e</td>
+                        <td>{{ ingredient.food_item}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             <h2>Steps</h2>
             <ol>
-                {% for step in recipe_object.steps.all %}
+                {% for step in recipe_object.steps.all %} {% comment %} in this case it is accessing the RecipeStep table with the related_name = steps {%endcomment%}
                     <li>{{ step.instruction }}</li>
                 {% endfor %}
             </ol>

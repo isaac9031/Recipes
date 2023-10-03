@@ -19,7 +19,7 @@ from django.shortcuts import redirect
 
 def redirect_to_recipe_list(request):
     if request.method == "GET":
-        return redirect("recipe_list")
+        return redirect("recipe_list") #it cames from urls in recipes, it used the name = recipe_list to get there
 
 
 

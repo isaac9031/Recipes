@@ -14,7 +14,7 @@ Login! - Scrumptious Recipes
     <h1>Login!</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p}}
+        {{ form_list.as_p}}
         <button>Submit</button>
     </form>
 </main>

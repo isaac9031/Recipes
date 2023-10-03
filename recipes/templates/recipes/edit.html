@@ -12,10 +12,11 @@ Scumptius Recipes
             </nav>
         </header>
         <main>
+            <h1>Edit {{post_object.title}}</h1>
             <form method="post">
                 {% csrf_token %}
-                {{ recipe_form.as_p }}
-                <button>Edit</button>
+                {{ post_form.as_p }}
+                <button>Save</button>
             </form>
         </main>
         <footer>Made with love by Scrumptious Recipes</footer>
